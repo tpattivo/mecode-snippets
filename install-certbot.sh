@@ -1,8 +1,8 @@
 #!/bin/bash
 echo "install epel"
-sudo yum install epel-release
+sudo yum install -y epel-release
 echo "install snapd"
-sudo yum install snapd
+sudo yum install -y snapd
 
 sudo systemctl enable --now snapd.socket
 sudo ln -s /var/lib/snapd/snap /snap
