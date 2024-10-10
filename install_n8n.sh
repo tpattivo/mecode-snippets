@@ -2,7 +2,7 @@
 
 # Kiểm tra xem script có được chạy với quyền root không
 if [[ $EUID -ne 0 ]]; then
-   echo "Script này cần được chạy với quyền root" 
+   echo "This script needs to be run with root privileges" 
    exit 1
 fi
 
@@ -20,15 +20,15 @@ check_domain() {
 }
 
 # Nhận input domain từ người dùng
-read -p "Nhập domain hoặc subdomain của bạn: " DOMAIN
+read -p "Enter your domain or subdomain: " DOMAIN
 
 # Kiểm tra domain
 if check_domain $DOMAIN; then
-    echo "Domain $DOMAIN đã trỏ đúng đến server này. Tiếp tục cài đặt."
+    echo "Domain $DOMAIN has been correctly pointed to this server. Continuing installation"
 else
-    echo "Domain $DOMAIN chưa trỏ đến server này."
-    echo "Vui lòng cập nhật DNS record của bạn để trỏ $DOMAIN đến IP $(curl -s https://api.ipify.org)"
-    echo "Sau khi đã cập nhật DNS, chạy lại script này."
+    echo "Domain $DOMAIN has not been pointed to this server."
+    echo "Please update your DNS record to point $DOMAIN to IP $(curl -s https://api.ipify.org)"
+    echo "After updating the DNS, run this script again"
     exit 1
 fi
 
