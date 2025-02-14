@@ -98,5 +98,7 @@ chmod -R 755 $N8N_DIR
 cd $N8N_DIR
 docker-compose up -d
 
-echo "n8n đã được cài đặt và cấu hình với SSL sử dụng Caddy. Truy cập https://${DOMAIN} để sử dụng."
+echo "N8n đã được cài đặt và cấu hình với SSL sử dụng Caddy. Truy cập https://${DOMAIN} để sử dụng."
 echo "Các file cấu hình và dữ liệu được lưu trong $N8N_DIR"
+echo "Học N8N cơ bản, hãy truy cập khóa học miễn phí: https://n8n-basic.mecode.pro/"
+echo "Script tạo bởi MeCode: https://mecode.pro"
