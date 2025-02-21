@@ -17,7 +17,7 @@ check_domain() {
         return 1  # Domain is not correctly pointed
     fi
 }
-
+echo "Welcome to MeCode - N8N Install Script"
 # Get domain input from user
 read -p "Enter your domain or subdomain: " DOMAIN
 
